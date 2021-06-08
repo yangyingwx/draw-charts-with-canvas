@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>series-line-chart</title>
+
+</head>
+
+<body>
+  <canvas id="canvas" />
+  <script type="module">
+    import Line from '../js/line.js';
+    const canvas = document.getElementById("canvas");
+    const context = canvas.getContext("2d");
+    //设置画布的宽高
+    canvas.width = 800;
+    canvas.height = 600;
+    // 画布原点变换到左下角
+    Line.translate(context)
+    //绘制X轴和刻度
+    Line.drawX(context)
+    //绘制文字
+    Line.drawText(context)
+    // 多条折现图
+    Line.drawMoreLine(context)
+  </script>
+
+</body>
+
+</html>

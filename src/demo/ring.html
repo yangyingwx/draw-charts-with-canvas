@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>radar</title>
+
+</head>
+
+<body>
+  <canvas id="canvas" />
+  <script type="module">
+    import Ring from '../js/ring.js';
+    const canvas = document.getElementById("canvas");
+    const context = canvas.getContext("2d");
+    //设置画布的宽高
+    canvas.width = 831;
+    canvas.height = 706;
+    // 变换坐标原点到画布中心
+    Ring.translate(context)
+    // 绘制圆环
+    Ring.drawRing(context)
+    // 绘制图例
+    Ring.drawLegend(context)
+  </script>
+
+</body>
+
+</html>
